@@ -278,7 +278,38 @@ configure(allprojects) { project ->
 		}
 		repositories {
 			mavenCentral()
-			maven { url "https://repo.spring.io/libs-spring-framework-build" }
+			maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+			maven { url 'https://maven.aliyun.com/repository/public'}
+			maven { url 'https://maven.aliyun.com/repository/spring'}
+			mavenCentral()
+			jcenter()
+			maven { url "https://repo.spring.io/snapshot" }
+			maven { url "https://repo.spring.io/milestone" }
+			maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/' }
+
+//			mavenCentral()
+//			maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+//			maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter'}
+//			maven { name "Bstek" ; url 'https://nexus.bsdn.org/content/groups/public/' }
+//			maven { url 'https://repo1.maven.org/maven2/' }
+//			maven { url 'http://maven.aliyun.com/nexus/content/repositories/central/' }
+//			maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+//			maven {url 'http://maven.oschina.net/content/groups/public/'}
+//			maven {url 'http://uk.maven.org/maven2/'}
+//			maven {url 'http://repo.maven.apache.org/maven2'}
+//			maven {url 'http://repo.springsource.org/plugins-release'}
+//			maven {
+//				url "https://repo.spring.io/release"
+//			}
+//			maven {
+//				url "https://repository.jboss.org/maven2"
+//			}
+//			maven { url "https://repo.spring.io/libs-spring-framework-build" }
+//			maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
+//
+//			maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+//			maven {url 'https://maven.aliyun.com/repository/public/'}
+//			maven {url 'https://maven.aliyun.com/repository/spring/'}
 		}
 	}
 	configurations.all {
@@ -305,7 +336,7 @@ configure([rootProject] + javaProjects) { project ->
 			kotlinOptions {
 				jvmTarget = "1.8"
 				freeCompilerArgs = ["-Xjsr305=strict"]
-				allWarningsAsErrors = true
+//				allWarningsAsErrors = true
 			}
 		}
 		compileTestKotlin {
