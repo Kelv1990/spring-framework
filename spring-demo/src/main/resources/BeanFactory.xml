@@ -24,4 +24,6 @@
 			</list>
 		</property>
 	</bean>
+
+	<bean id="testListener" class="test.multicaster.TestListener"/>
 </beans>
