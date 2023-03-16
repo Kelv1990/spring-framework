@@ -2,7 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
-	<bean id ='bfpp' class="test.bean_factory_post_processor.ObscenityRemovingBeanFactoryPostProcessor">
+	<bean id='bfpp' class="test.bean_factory_post_processor.ObscenityRemovingBeanFactoryPostProcessor">
 		<property name="obscenties">
 			<set>
 				<value>bollocks</value>
@@ -16,6 +16,12 @@
 		<property name="connectionString" value="bollocks"/>
 		<property name="password" value="imaginecup"/>
 		<property name="username" value="Microsoft"/>
-
+	</bean>
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>i18n/messages</value>
+			</list>
+		</property>
 	</bean>
 </beans>
