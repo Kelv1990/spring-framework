@@ -11,8 +11,8 @@ public class TestI18n {
 		String [] configs = {"BeanFactory.xml"};
 		ApplicationContext ctx =new ClassPathXmlApplicationContext(configs);
 		Object[] params = {"John", new GregorianCalendar().getTime()};
-		String str1 = ctx.getMessage("test", params, Locale.US);
-		String str2 = ctx.getMessage("test", params, Locale.CHINA);
+		String str1 = ctx.getMessage("startTime", params, Locale.US);
+		String str2 = ctx.getMessage("startTime", params, Locale.CHINA);
 		System.out.println(str1);
 		System.out.println(str2);
 	}
