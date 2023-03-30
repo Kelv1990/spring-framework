@@ -19,7 +19,7 @@ public class AspectTest {
 		System.out.println("afterTest");
 	}
 
-	@Around("test1()")
+//	@Around("test1()")
 	public Object aroundTest(ProceedingJoinPoint p) {
 		System.out.println("before1");
 		Object o = null;
